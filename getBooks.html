@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是你的“圣诞老人”</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+	<div id="loader" class="m-wrap-loading">
+	    <div class="rect1"></div>
+	    <div class="rect2"></div>
+	    <div class="rect3"></div>
+	    <div class="rect4"></div>
+	    <div class="rect5"></div>
+	</div>
+	
+	<!--处理相片的loading页-->
+	<div id="loadingSection" class="loading-section">
+	      <div class="body">
+	        	<img class="animate" src="img/icon-loading.png" />
+	        	<p>处理中...</p>
+	      </div>
+    </div>
+	
+	<!--页面2，上传照片页-->
+    <div class="g-wrap2">
+    	<div class="m-picKuang">
+    		<label for="file" class="f-uploadImg"></label>
+			<div class="m-imgOut">
+				<img class="f-theImg" />
+			</div>
+			<p class="m-thewen33 m-thewen331">请点击“+”号</p>
+			<p class="m-thewen33 m-thewen332">上传你想要装扮的照片哦</p>
+			<p class="m-thewen">点击照片可重新选择</p>
+    	</div>
+    	<input type="file" name="upload-file" id="file" accept="image/*"/>
+    	<span class="tspanme">0</span>
+    	<div class="m-loadBtn"></div>
+    </div>
+    
+    <!--页面3，制作照片-->
+    <div class="g-wrap3">
+    	<img src="img/banner3.png" class="m-wrap3Ban" />
+    	<div id="picMaker">
+			<!--照片-->
+			<div class="m-imgBox">
+				<img id="m-loadImg" />
+				<div class="m-sucaiOut">
+					<img class="f-sucai" src="img/sucai1.png" />
+					<div class="controlShape">
+						<span class="shape shape1"></span>
+						<span class="shape shape2"></span>
+						<span class="shape shape3"></span>
+					</div>
+				</div>
+				<div class="imgKuang">
+					<img class="imgK" src=""/>
+				</div>
+			</div>
+			<!--白底蒙版-->
+			<div class="whiteMeng"></div>
+			<!--相框层-->
+		</div>
+		
+		<div class="m-step1">
+			<div class="m-stepTop">
+				<div>第一步： 选择一个你喜欢的头饰吧</div>
+				<div class="f-sucaiDelete">取消头饰</div>
+			</div>
+			<div class="m-stepBot">
+				<div class="f-scOut">
+					<div class="f-scIn f-scIn1">
+						<img src="img/sucai1.png"/>
+					</div>
+					<p>圣诞麋鹿</p>
+				</div>
+				<div class="f-scOut">
+					<div class="f-scIn f-scIn2">
+						<img src="img/sucai2.png"/>
+					</div>
+					<p>圣诞老人</p>
+				</div>
+				<div class="f-scOut">
+					<div class="f-scIn f-scIn3">
+						<img src="img/sucai3.png"/>
+						<div class="f-scInLock"></div>
+					</div>
+					<p>圣诞小兔</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="m-step2">
+			<div class="m-stepTop">第二步： 选择一个符合你圣诞气质的边框</div>
+			<div class="m-stepBot">
+				<div class="f-scOut">
+					<div class="f-scIn f-scIn1">
+						<img src="img/sucai4.png"/>
+					</div>
+				</div>
+				<div class="f-scOut">
+					<div class="f-scIn f-scIn2">
+						<img src="img/sucai5.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    	<div class="m-makeBtn"></div>
+    </div>
+    
+    <!--页面4，展示已完成照片页-->
+    <div class="g-wrap4">
+		<div class="m-imgTop">
+			<img class="f-shuchu" src=""/>
+			<img src="img/oldMan.png" class="m-imgOldMan" />
+			<div class="m-thewen22">长按保存图片</div>
+		</div>
+		
+		<div class="m-oldManBtn"></div>
+		<div class="m-getBtn"></div>
+		<div class="m-botWord">哇！当别人的圣诞老人也有礼物呢~快来领取吧！</div>
+		
+		
+		<!--注册领书页-->
+	    <div class="m-login">
+	    	<div class="m-loginTitle">
+	    		<p>输入手机号即可领取动画绘本</p>
+	    		<p>《巴巴和圣诞老人》圣诞礼物</p>
+	    	</div>
+			<div class="m-phoneOut">
+	        	<input class="m-phone" placeholder="手机号码" />
+	        </div>
+	        <div class="m-codeOut">
+	        	<input class="m-code" placeholder="验证码" />
+	        	<span class="getCode">获取验证码</span>
+	        </div>
+	        <div class="m-getBook"></div>
+	        <div class="m-closeLogin"></div>
+		</div>
+    </div>
+    <div class="musicOn"></div>
+    
+    <audio id="music" src="img/music.mp3" autoplay loop></audio>
+    <!--蒙版层-->
+    <div class="wx-share"></div>
+    <div class="m-mengBan"></div>
+    
+    <img id="g-kuangTrue" src="img/canPic.png" style="display: none;"/>
+    <img id="g-ewm" src="img/EWM.png" style="display: none;"/>
+    <div class="j-pop" style="display: none;">
+        <p></p>
+    </div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/imageMaker.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(window).load(function() {
+        $("#loader").fadeOut(1000);
+    });
+    
+    var theVideo = document.getElementById("music");
+    var audioStatus = "1";
+    theVideo.addEventListener("playing", function(){
+	    audioStatus = "playing";
+	    $(".musicOn").css({"backgroundImage":"url(img/musicsON.png)"});
+		});
+		theVideo.addEventListener("pause", function(){
+				audioStatus = "paused";
+				$(".musicOn").css({"backgroundImage":"url(img/musicsOff.png)"});
+		});
+    $(".musicOn").on("click",function(){
+    	if (audioStatus == "playing") {
+    		theVideo.pause();
+    		$(".musicOn").css({"backgroundImage":"url(img/musicsOff.png)"});
+    	}else if (audioStatus == "paused" || audioStatus == "1") {
+    		theVideo.play();
+    		$(".musicOn").css({"backgroundImage":"url(img/musicsON.png)"});
+    	}
+    });
+
+    imageMaker("#m-loadImg",".m-sucaiOut");
+		imageMaker(".m-sucaiOut",".m-sucaiOut");
+		imageMaker(".imgKuang",".m-sucaiOut");
+    page.page2Init();
+</script>
+</html>

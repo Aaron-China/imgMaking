@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是你的“圣诞老人”</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+	<div id="loader" class="m-wrap-loading">
+	    <div class="rect1"></div>
+	    <div class="rect2"></div>
+	    <div class="rect3"></div>
+	    <div class="rect4"></div>
+	    <div class="rect5"></div>
+	</div>
+	
+    <div class="g-wrap">
+        
+        <div class="musicOn"></div>
+        
+        <div class="m-goNext"></div>
+        <audio id="music" src="img/music.mp3" autoplay loop></audio>
+    </div>
+    <div style="display: none;">
+	</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(window).load(function() {
+        $("#loader").fadeOut(1000);
+    });
+    
+    var theVideo = document.getElementById("music");
+    var audioStatus = "1";
+    theVideo.addEventListener("playing", function(){
+	    audioStatus = "playing";
+	    $(".musicOn").css({"backgroundImage":"url(img/musicsON.png)"});
+    });
+    theVideo.addEventListener("pause", function(){
+        audioStatus = "paused";
+        $(".musicOn").css({"backgroundImage":"url(img/musicsOff.png)"});
+    });
+    $(".musicOn").on("click",function(){
+    	if (audioStatus == "playing") {
+    		theVideo.pause();
+    		$(".musicOn").css({"backgroundImage":"url(img/musicsOff.png)"});
+    	}else if (audioStatus == "paused" || audioStatus == "1") {
+    		theVideo.play();
+    		$(".musicOn").css({"backgroundImage":"url(img/musicsON.png)"});
+    	}
+    });
+    page.page1Init();
+</script>
+</html>

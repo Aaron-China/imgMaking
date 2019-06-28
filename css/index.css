@@ -1,0 +1,816 @@
+body,html{
+    width: 100%;
+    height:100%;
+    position: relative;
+    min-height: 603px;
+    margin: 0 auto;
+}
+.m-wrap-loading{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #fff;
+    z-index: 999;
+}
+.m-wrap-loading > div {
+    background-color: #4dbcc8;
+    height: 60px;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+    margin-top: 60%;
+}
+.m-wrap-loading .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.m-wrap-loading .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.m-wrap-loading .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.m-wrap-loading .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+    20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }  20% {
+           transform: scaleY(1.0);
+           -webkit-transform: scaleY(1.0);
+       }
+}
+/*横屏*/
+@media all and (orientation : landscape){
+    .g-wrap{
+        padding-bottom: 1vw;
+        height: 100%;
+    }
+}
+/*竖屏*/
+@media all and (orientation : portrait){
+    .g-wrap{
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes down {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes down {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+/*处理相片的loading页*/
+@keyframes loading {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+.loading-section {
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+
+.loading-section .body {
+	width: 140px;
+	height: 140px;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -70px;
+	margin-top: -132px;
+	border-radius: 15px;
+}
+
+.loading-section .body img {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+}
+
+.loading-section .body img.animate {
+	animation: loading 0.8s linear 0s infinite;
+	-webkit-animation: loading 0.8s linear 0s infinite;
+}
+
+.loading-section .body p {
+	width: 100%;
+	height: 12px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+}
+
+@keyframes slide-in {
+	from {
+		transform: translate(0, -30px);
+		opacity: 0;
+	}
+	50% {
+		transform: translate(0, -10px);
+		opacity: 0.5;
+	}
+	to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slide-in {
+	from {
+		transform: translate(0, -30px);
+		opacity: 0;
+	}
+	50% {
+		transform: translate(0, -10px);
+		opacity: 0.5;
+	}
+	to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+/*首页*/
+.g-wrap{
+    width: 100%;
+    height: 100%;
+    background: url("../img/banner1.png") center center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.g-wrap .m-goNext{
+	width: 76.5px;
+	height: 28px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	bottom: 3%;
+	margin-left: -38.25px;
+	background: url(../img/theHua.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/*上传照片页*/
+.g-wrap2{
+    width: 100%;
+    height: 100%;
+    background: url("../img/banner2.png") center center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.g-wrap2 .m-picKuang{
+	width: 341.5px;
+	height: 326px;
+	background: url("../img/picKuang.png") center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    margin-left: -177.75px;
+}
+.g-wrap2 .m-loadBtn{
+	width: 280px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	margin-left: -140px;
+	background-image: url(../img/btn1.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.g-wrap2 .m-picKuang .f-uploadImg{
+	display: block;
+	width: 269px;
+	height: 192px;
+	position: absolute;
+	top: 111px;
+	left: 41px;
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: 30;
+	border: none;
+}
+.g-wrap2 .m-picKuang .m-imgOut{
+	width: 270px;
+	height: 195px;
+	position: absolute;
+	top: 111px;
+	left: 42px;
+	border: none;
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: 20;
+}
+.g-wrap2 .m-picKuang .m-imgOut .f-theImg{
+	width: 0%;
+}
+.g-wrap2 #file{
+	display: none;
+}
+
+
+/*处理照片页*/
+.g-wrap3{
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.g-wrap3 .m-wrap3Ban{
+	width: 100%;
+}
+
+.g-wrap3 #picMaker{
+	width: 341.5px;
+	height: 326px;
+	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: -176.75px;
+	background: url("../img/picKuang2.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.g-wrap3 #picMaker .m-imgBox{
+	width: 270px;
+	height: 194px;
+	position: absolute;
+	top: 111px;
+	left: 42px;
+	overflow: hidden;
+	background-color: white;
+	border-radius: 7px;
+}
+
+.g-wrap3 #picMaker .m-imgBox .imgKuang{
+	width:190px;
+	position: absolute;
+	top: 10px;
+	left: 40px;
+}
+.g-wrap3 #picMaker .m-imgBox .imgKuang img{
+	width: 100%;
+}
+
+.g-wrap3 #picMaker .m-imgBox #m-loadImg{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*新添加元素的样式*/
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .f-sucai{
+	width: 100%;
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	/* Internet Explorer */
+	-moz-transform: rotate(0deg);
+	/* Firefox */
+	-webkit-transform: rotateZ(0deg);
+	/* Safari 和 Chrome */
+	-o-transform: rotate(0deg);
+	/* Opera */
+}
+
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut{
+	position: absolute;
+	z-index: 20;
+	width: 70px;
+	top: 4px;
+	left: 100px;
+	/*display: none;*/
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	/* Internet Explorer */
+	-moz-transform: rotate(0deg);
+	/* Firefox */
+	-webkit-transform: rotateZ(0deg);
+	/* Safari 和 Chrome */
+	-o-transform: rotate(0deg);
+	/* Opera */
+}
+
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .controlShape{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .controlShape .shape{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-size: 100% 100%;
+	background-repeat: repeat;
+}
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .controlShape .shape1{
+	top: -20px;
+	left: -20px;
+	background-image: url(../img/small.png);
+}
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .controlShape .shape2{
+	top: -20px;
+	right: -20px;
+	background-image: url(../img/route.png);
+}
+.g-wrap3 #picMaker .m-imgBox .m-sucaiOut .controlShape .shape3{
+	bottom: -20px;
+	right: -20px;
+	background-image: url(../img/big.png);
+}
+
+.g-wrap3 .m-step1{
+	width: 80%;	
+	position: absolute;
+	top: 370px;
+	left: 50%;
+	margin-left: -40%;
+}
+.g-wrap3 .m-step1 .m-stepTop{
+	width: 100%;	
+	color: white;
+	overflow: hidden;
+}
+.g-wrap3 .m-step1 .m-stepTop div:nth-child(1){
+	font-size: 0.8rem;
+	float: left;
+	margin-top: 7px;
+}
+.g-wrap3 .m-step1 .m-stepTop div:nth-child(2){
+	width: 70px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 23px;
+	font-size: 0.6rem;
+	float: right;
+	box-sizing: border-box;
+}
+
+.g-wrap3 .m-step1 .m-stepBot{
+	width: 100%;
+	margin-top: 9px;
+	display: flex;
+	justify-content: space-between;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut{
+	width: 92px;
+	height: 126px;
+	background-color: #A7CEFE;
+	border-radius: 8px;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut .f-scIn{
+	width: 80px;
+	height: 92px;
+	margin: 7px 5px 0px 5px;
+	background-color: #E5F1FF;
+	border-radius: 7px;
+	text-align: center;
+	position: relative;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut .f-scIn1 img{
+	width: 54px;
+	height: 57px;
+	margin-top: 14px;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut .f-scIn2 img{
+	width: 66.5px;
+	height: 49px;
+	margin-top: 14px;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut .f-scIn3 img{
+	width: 52.5px;
+	height: 56.5px;
+	margin-top: 14px;
+}
+
+.g-wrap3 .m-step1 .m-stepBot .f-scOut .f-scIn .f-scInLock{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url(../img/lock.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.g-wrap3 .m-step1 .m-stepBot .f-scOut p{
+	text-align: center;
+	margin-top: 5px;
+	color: #2577B3;
+	font-size: 0.9rem;
+}
+
+
+.g-wrap3 .m-step2{
+	width: 80%;	
+	position: absolute;
+	top: 573px;
+	left: 50%;
+	margin-left: -40%;
+}
+.g-wrap3 .m-step2 .m-stepTop{
+	width: 100%;	
+	color: white;
+	overflow: hidden;
+	font-size: 0.8rem;
+}
+
+.g-wrap3 .m-step2 .m-stepBot{
+	width: 100%;
+	margin-top: 17px;
+	display: flex;
+	justify-content: space-between;
+}
+.g-wrap3 .m-step2 .m-stepBot .f-scOut{
+	width: 140px;
+	height: 136px;
+	background-color: #A7CEFE;
+	border-radius: 8px;
+}
+.g-wrap3 .m-step2 .m-stepBot .f-scOut .f-scIn{
+	width: 130px;
+	height: 126px;
+	margin: 5px;
+	background-color: #E5F1FF;
+	border-radius: 7px;
+	text-align: center;
+	position: relative;
+}
+.g-wrap3 .m-step2 .m-stepBot .f-scOut .f-scIn1 img{
+	width: 100px;
+	height: 117.9159px;
+	margin-top: 4px;
+}
+.g-wrap3 .m-step2 .m-stepBot .f-scOut .f-scIn2 img{
+	width: 110px;
+	height: 104.4127px;
+	margin-top: 10px;
+}
+
+.g-wrap3 .m-makeBtn{
+	width: 280px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	bottom: 5%;
+	margin-left: -140px;
+	background-image: url(../img/btn2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*页面4，展示已完成照片页*/
+.g-wrap4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: url("../img/banner2.png") center center no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.g-wrap4 .m-imgTop{
+	width: 326.5px;
+	height: 335px;
+	margin: 72px auto 0px auto;
+}
+.g-wrap4 .m-imgTop .f-shuchu{
+	width: 100%;
+}
+.g-wrap4 .m-imgTop .m-imgOldMan{
+	position: absolute;
+	width: 292px;
+	height: 93.5px;
+	top: 8px;
+	left: 9px;
+	
+}
+.g-wrap4 .m-oldManBtn{
+	width: 280px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	bottom: 18.8%;
+	margin-left: -140px;
+	background-image: url(../img/btn2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.g-wrap4 .m-getBtn{
+	width: 280px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	bottom: 7.4%;
+	margin-left: -140px;
+	background-image: url(../img/btn3.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.g-wrap4 .m-botWord{
+	width: 100%;
+	text-align: center;
+	color: #C16632;
+	position: absolute;
+	bottom: 2%;
+	font-size: 0.6rem;
+}
+
+/*登录领书页*/
+.g-wrap4 .m-login{
+	width: 260px;
+	height: 360px;
+	position: absolute;
+	z-index: 200;
+	top: 9.3%;
+	left: 50%;
+	margin-left: -130px;
+	display: none;
+	background-image: url(../img/getPhone.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-size: 0.8rem;
+}
+.g-wrap4 .m-login .m-loginTitle{
+	width: 100%;
+	text-align: center;
+	margin-top: 111px;
+	font-size: 1rem;
+	line-height: 23px;
+	color: #6D6D6D;
+}
+
+.g-wrap4 .m-login .m-phoneOut,.g-wrap4 .m-login .m-codeOut,.g-wrap4 .m-login .m-getBook{
+	width: 84%;
+	height: 38px;
+	margin: 16px auto auto auto; 
+	position: relative;
+	border-radius: 38px;
+	background-color: #EFEFEF;
+	padding-top: 1px;
+}
+
+.g-wrap4 .m-login .m-phoneOut{
+	margin-top: 15px;
+	font-size: 1rem;
+}
+
+.g-wrap4 .m-login .getCode{
+	position: absolute;
+	display: block;
+	border-left: 1px solid #CB402F;
+	right: 16px;
+	top: 11px;
+	color: #CB402F;
+	font-size: 1rem;
+	padding-left: 6px;
+}
+.g-wrap4 .m-login .m-phone{
+	width: 85%;
+	height: 38px;
+	line-height: 38px;
+	outline: none;
+	border: none;
+	padding: 0;
+	border-radius: 38px;
+	padding-left: 16px;
+	font-size: 1rem;
+	background-color: #EFEFEF;
+}
+.g-wrap4 .m-login .m-code{
+	width: 55%;
+	height: 38px;
+	line-height: 38px;
+	outline: none;
+	border: none;
+	padding: 0;
+	border-radius: 38px;
+	padding-left: 16px;
+	font-size: 1rem;
+	background-color: #EFEFEF;
+}
+
+.g-wrap4 .m-login .m-getBook{
+	outline: none;
+	border: none;
+	width: 90%;
+	border-radius: 3px;
+	margin-top:30px;
+	background-color: transparent;
+	box-shadow: none;
+}
+.g-wrap4 .m-login .m-getBook img{
+	width: 100%;
+}
+
+.g-wrap4 .m-login .m-closeLogin{
+	width: 36px;
+	height: 36px;
+	background-image: url(../img/theClose.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 7px;
+	right: -6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.m-mengBan{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.wx-share{
+	width: 237.5px;
+	height: 155px;
+	background-image: url(../img/shareTip.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -5px;
+	right: 27px;
+	z-index: 200;
+	display: none;
+}
+
+
+/*弹出层样式*/
+/*2017/06/21*/
+.j-pop{
+    width: 85%;
+    height: 12vw;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -42.5%;
+    background-color: rgba( 0, 0, 0,.5 );
+    border-radius: 12vw;
+    z-index: 8888;
+}
+.j-pop p{
+    height: 12vw;
+    line-height: 12vw;
+    text-align: center;
+    color: #ffffff;
+    font-size: 4.7vw;
+}
+
+.tspanme{
+	display: none;
+}
+
+.musicOn{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background-image: url(../img/musicsOff.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.m-thewen{
+	width: 100%;
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+	position: absolute;
+	bottom: -50px;
+	display: none;
+}
+.m-thewen331{
+	width: 100%;
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+	position: absolute;
+	bottom: -30px;	
+}
+.m-thewen332{
+	width: 100%;
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+	position: absolute;
+	bottom: -60px;	
+}
+
+.m-thewen22{
+	width: 100%;
+	color: white;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 0.8rem;
+}
